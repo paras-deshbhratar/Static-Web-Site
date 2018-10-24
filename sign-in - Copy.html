@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-in</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="branding">
+            <h1 class="header">Alchemy Solutions</h1>
+        </div>
+        <div class="social-header">
+            <a class="social-hover" href="http:www.instagram.com"><img class="social" src="./img/insta.png"></a>
+            <a class="social-hover" href="http:www.twitter.com"><img class="social" src="./img/twitter.png"></a>
+            <a class="social-hover" href="http:www.facebook.com"><img class="social" src="./img/fb.png"></a>
+        </div>
+    </header>
+    <div class="search">
+        <form action="https://www.google.com/search" class="search" method="get" name="searchform" target="_blank">
+            <!--<input name="sitesearch" type="hidden" value="example.com">-->
+            <input autocomplete="on" class="search" name="q" placeholder="Google Search" required="required" type="text">
+            <br>
+            <br>
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="login-form-sign-in-page">
+        <form id="login-sign-in">
+            <input class="button" type="type" name="username" id="un" placeholder="Enter Username">
+            <br>
+            <br>
+            <input class="button" type="type" name="password" id="pwd" placeholder="Enter Password">
+            <br>
+            <br>
+            <input type="submit" value="Login" onclick="validate()" id="sub3">
+        </form>
+    </div>
+    <div class="sign-in-aside">
+        <h3 id="clients-banner">Our Clients</h3>
+        <slider class="innerbox">
+            <a href="microsoft.html" target="iframe2"><img id="clients" src="./img/microsoft.png"></a>
+            <a href="amdocs.html" target="iframe2"> <img id="clients" src="./img/amdocs.png"></a>
+            <a href="dell.html" target="iframe2"><img id="clients" src="./img/dell.png"></a>
+            <a href="accenture.html" target="iframe2"><img id="clients" src="./img/accenture.png"></a>
+        </slider>
+    </div>
+    <div class="sign-in-frame">
+        <iframe name="iframe2" src="dell.html"></iframe>
+    </div>
+    <footer>
+        <div class="footer">
+            <span class="rights">&copy;2018 Alchemy Solutions. All Rights Reserved.</span>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-in</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="branding">
+            <h1 class="header">Alchemy Solutions</h1>
+        </div>
+        <div class="social-header">
+            <a class="social-hover" href="http:www.instagram.com" target="_blank"><img class="social" src="./img/insta.png"></a>
+            <a class="social-hover" href="http:www.twitter.com" target="_blank"><img class="social" src="./img/twitter.png"></a>
+            <a class="social-hover" href="http:www.facebook.com" target="_blank"><img class="social" src="./img/fb.png"></a>
+        </div>
+    </header>
+    <div class="search">
+        <form action="https://www.google.com/search" class="search" method="get" name="searchform" target="_blank">
+            <!--<input name="sitesearch" type="hidden" value="example.com">-->
+            <input autocomplete="on" class="search" name="q" placeholder="Google Search" required="required" type="text">
+            <br>
+            <br>
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="login-form-sign-in-page">
+        <form id="login-sign-in" action="final-page.html">
+            <input class="button" type="type" name="username" id="un" placeholder="Enter Username">
+            <br>
+            <br>
+            <input class="button" type="type" name="password" id="pwd" placeholder="Enter Password">
+            <br>
+            <br>
+            <input type="submit" value="Login" onclick="validate()" id="sub3">
+        </form>
+    </div>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+    /* The Modal (background) */
+
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+    }
+    /* Modal Content (image) */
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+    /* Caption of Modal Image */
+
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+    /* Add Animation */
+
+    .modal-content,
+    #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+    /* The Close Button */
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* 100% Image Width on Smaller Screens */
+
+    @media only screen and (max-width: 700px) {
+        .modal-content {
+            width: 100%;
+        }
+    }
+    </style>
+    </head>
+
+    <body>
+        <span id="our-clients">Our Clients</span>
+        <div class="images">
+            <img id="dell" src="./img/dell.png" alt="Dell is an American multinational computer technology company based in Round Rock, Texas, United States, that develops, sells, repairs, and supports computers and related products and services." style="width:100%;max-width:300px">
+            <img id="micro" src="./img/microsoft.png" alt="Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports and sells computer software, consumer electronics, personal computers, and related services." style="width:100%;max-width:300px">
+            <img id="amdocs" src="./img/amdocs.png" alt="Amdocs is a multinational corporation headquartered in Chesterfield, Missouri, with support and development centers located worldwide. The company specializes in software and services for communications, media and financial services providers and digital enterprises." style="width:100%;max-width:300px">
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <p class="modal-content" id="img01"></p>
+            <div id="caption"></div>
+        </div>
+        <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img1 = document.getElementById('dell');
+        var img2 = document.getElementById('micro');
+        var img3 = document.getElementById('amdocs');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img1.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        img2.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        img3.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        </script>
+        <!--
+        <footer>
+            <div class="footer">
+                <span class="rights">&copy;2018 Alchemy Solutions. All Rights Reserved.</span>
+            </div>
+        </footer>
+    -->
+    </body>
+
+</html>
